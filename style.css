@@ -1,0 +1,329 @@
+    /* 
+    Theme Name: 	easytube
+    Description: 	WordPress video web portal template. 
+    Version: 1.0
+    Author: 		zigzi6  
+    */
+    
+    @import url('https://fonts.googleapis.com/css?family=Kulim+Park|Open+Sans&display=swap');
+
+    * {
+        color: white;
+        transition: all .25s ease-in-out;
+
+        font-family: 'Kulim Park', sans-serif;
+
+    }
+
+    body {
+        margin: 0;
+        background: #181a21;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        z-index: 20;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+    .header {
+        width: 100%;
+        background: #20232c;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0 45px;
+        border-bottom: 1px solid #41444b47;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .header .o {
+        display: flex;
+        height: 100%;
+        left: 0;
+    }
+
+    h {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .header li li>a {
+        padding-right: 10px;
+    }
+
+    .header .o>li>a:after {
+        padding-bottom: 3px;
+    }
+
+    .header li>a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header .o>li>a:hover>span {
+        width: 100%;
+    }
+
+    .header li a:after {
+        color: #757575;
+        content: '›';
+        margin-left: auto;
+        padding-left: 10px;
+    }
+
+    .header li>a:only-child:after {
+        content: '';
+    }
+
+    .header .o>li li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+    }
+
+
+
+    .header .o>li>a>span {
+        border-bottom: 2px solid #e12b5f;
+        padding-bottom: 3px;
+        transition: all .3s ease-in-out;
+        width: 0%;
+    }
+
+    .header .o>li,
+    .header li>a {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .header li {
+        overflow: hidden;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: initial;
+    }
+
+    .header li:hover {
+        overflow: unset;
+    }
+
+    .header li>ul>li>a {
+        border-left: 1px solid #2d2f38;
+        height: 46px;
+    }
+
+    .header li li span {
+        color: #d2d3d5;
+    }
+
+    .header a:hover>span {
+        color: white;
+    }
+
+    .header .o>li ul {
+        position: absolute;
+        background: #20232c;
+        border-top: 2px solid #e12b5f;
+        box-sizing: border-box;
+        z-index: 888;
+        margin-top: 40px;
+        opacity: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    .header li:hover>ul {
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    .header ul ul ul {
+        transform: translateY(-2px);
+        min-width: 100%;
+    }
+
+    .header .b {
+        margin-left: auto;
+        display: none; 
+    }
+
+    .header .o div {
+        display: none;
+    }
+
+    .custom-logo-link img{
+        height: auto;
+        width: 100px;
+    }
+
+    @media only screen and (max-width: 960px) {
+        .header .b {
+         display: block; 
+        }
+        .header .o>li li {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .header .o {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 55px;
+        }
+
+        .header .o li {
+            width: 100%;
+            background: #181a21;
+            overflow: inherit;
+            display: block !important;
+        }
+
+        .header li a:after {
+            display: none;
+        }
+
+        .header .ham {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 50px;
+            height: 50px;
+            /* fill: white; */
+        }
+
+        .header .o>li>a>span {
+            padding: 0;
+        }
+
+        .header li>a {
+            padding: 0 0 0 20px !important;
+            border-left: 0 !important;
+            border-top: 1px solid #292c35;
+        }
+
+        .header .hamRotate.active {
+            transform: rotate(45deg);
+        }
+
+        .header .o>li>a>span {
+            width: 0 !important;
+        }
+
+        .header .o>li ul {
+            border: 0;
+        }
+
+        .header .o div {
+            /* display: flex; */
+            display: none;
+            width: 54px;
+            height: 54px;
+            background: #292c35;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header .o div svg {
+            width: 15px;
+            height: 15px;
+            fill: #505051;
+        }
+
+        
+
+        .header .o>li ul {
+            width: 100%;
+            opacity: 1;
+            margin: 0;
+            /* display: none; */
+            overflow: hidden;
+            height: 0;
+            position: relative;
+            background: #181a21;
+        }
+
+        .header .o div.active svg {
+            transform: rotate(180deg);
+        }
+
+        .header .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: white;
+            stroke-width: 5.5;
+            stroke-linecap: round;
+        }
+
+        .header .o .op {
+            height: 0px !important;
+        }
+
+        .header .o.gg {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .header .ham4 .top {
+            stroke-dasharray: 40 121;
+        }
+
+        .header .ham4 .bottom {
+            stroke-dasharray: 40 121;
+        }
+
+        .header .ham4.active .top {
+            stroke-dashoffset: -68px;
+        }
+
+        .header .ham4.active .bottom {
+            stroke-dashoffset: -68px;
+        }
+
+    }
+
+    @keyframes lds-ripple {
+        0% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+
+        100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+        }
+    }
+    .footer{
+        height: 200px;
+        width: 100%;
+        padding: 0 45px;
+        box-sizing: border-box;
+        background: black;
+    }
